@@ -1,7 +1,7 @@
 version: '2'
 services:
   vlmcsd:
-    image: yumusb/vlmcsd
+    image: yumusb/vlmcsd:latest
     restart: always
     ports:
       - 1688:1688
