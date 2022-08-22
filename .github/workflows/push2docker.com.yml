@@ -18,5 +18,7 @@ jobs:
        cd build
        tagname="yumusb/vlmcsd:$(date +%s)"
        docker build . --file Dockerfile --tag $tagname
+       docker tag $tagname yumusb/vlmcsd:latest
        docker login -u yumusb -p $DOCKER_COM_PASS
        docker push $tagname
+       docker push yumusb/vlmcsd:latest
