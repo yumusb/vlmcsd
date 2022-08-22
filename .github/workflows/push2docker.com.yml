@@ -14,7 +14,7 @@ jobs:
     - name: Build the Docker image
       run: |
        cd build
-       tagname=$(yumusb/vlmcsd:$(date +%s))
-       docker build . --file Dockerfile --tag yumusb/vlmcsd:$tagname
+       tagname="yumusb/vlmcsd:$(date +%s)"
+       docker build . --file Dockerfile --tag $tagname
        docker login -u yumusb -p DOCKER_COM_PASS
        docker push $tagname
