@@ -1,0 +1,7 @@
+version: '2'
+services:
+  vlmcsd:
+    image: yumusb/vlmcsd
+    restart: always
+    ports:
+      - 1688:1688

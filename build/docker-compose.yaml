@@ -1,0 +1,7 @@
+version: '2'
+services:
+  vlmcsd:
+    build: .
+    restart: always
+    ports:
+      - 1688:1688
